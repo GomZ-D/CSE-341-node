@@ -1,0 +1,34 @@
+{
+    "contact":{
+        "firstName":"Diego",
+        "lastName": "Gomez",
+        "email":"diego@gmail.com",
+        "favoriteColor":"red",
+        "birthday":"03/05/1978"
+    },
+
+    "contact2":{
+        "firstName":"Jamie",
+        "lastName": "Clanton",
+        "email":"jamie@gmail.com",
+        "favoriteColor":"orange",
+        "birthday":"04/15/1992"
+    },
+
+    "contact3":{
+        "firstName":"Silvia",
+        "lastName": "Schipillman",
+        "email":"silvia@gmail.com",
+        "favoriteColor":"blue",
+        "birthday":"03/12/1976"
+    },
+
+    "contact4":{
+        "firstName":"Analia",
+        "lastName": "Gomez",
+        "email":"gaby@gmail.com",
+        "favoriteColor":"pink",
+        "birthday":"09/04/1980"
+    }
+    
+}
