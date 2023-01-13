@@ -13,8 +13,8 @@ app
       next();
     })
 
-    .use('/', require('./routes'));
- app.use('/', require('./routes/contacts'));
+    // .use('/', require('./routes'));
+  app.use('/', require('./routes/contacts'));
  
 mongodb.initDb((err, mongodb)=>{
     if (err) {
