@@ -5,12 +5,19 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "https://cse-341-w01-ulks.onrender.com",
+  "host": "cse-341-w01-ulks.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/contacts": {
       "get": {
         "description": "",
@@ -149,13 +156,6 @@
             "description": "Internal Server Error"
           }
         }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
       }
     }
   }
