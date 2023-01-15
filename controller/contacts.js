@@ -5,31 +5,40 @@ const ObjectId = require('mongodb').ObjectId;
 //--FUNCTION TO GET ALL THE COLLECTION
 //-------------------------------------
 const getAll = async (req, res, next) => {
-  const result = await mongodb
-      .getDb()
-      .db()
-      .collection('contacts')
-      .find();
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists);
-  });
+  try{
+    const result = await mongodb
+        .getDb()
+        .db()
+        .collection('contacts')
+        .find();
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    });
+  }catch (err) {
+    res.status(500).json({message: err.message});
+  }
 };
 
 //------------------------------------
 //--FUNCTION TO GET A SINGLE CONTAT
 //------------------------------------
+
 const getSingle = async (req, res, next) => {
-  const userId = new ObjectId(req.params.id);
-  const result = await mongodb
-    .getDb()
-    .db()
-    .collection('contacts')
-    .find({ _id: userId });
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]);
-  });
+  try{
+    const userId = new ObjectId(req.params.id);
+    const result = await mongodb
+      .getDb()
+      .db()
+      .collection('contacts')
+      .find({ _id: userId });
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists[0]);
+    });
+  }catch(err) {
+    res.status(500).json(err);
+}
 };
 
 //----------------------------------------

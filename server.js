@@ -5,6 +5,10 @@ const bodyParser = require('body-parser');
  
 const app = express();
 const port = process.env.PORT || 3000;
+
+// const swaggerUi = require('swagger-ui-express');
+// const swaggerDocument = require('./swagger.json');
+
  
 app 
     .use(bodyParser.json())
@@ -12,9 +16,10 @@ app
       res.setHeader('Access-Control-Allow-Origin', '*');
       next();
     })
-
+    // .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
     // .use('/', require('./routes'));
-  app.use('/', require('./routes/contacts'));
+//   app.use('/', require('./routes/contacts'));
+  app.use('/', require('./routes'));
  
 mongodb.initDb((err, mongodb)=>{
     if (err) {

@@ -3,6 +3,8 @@ const router = require('express').Router();
 
 const controller = require('../controller/contacts');
 
+
+
 // ---ROUTES
 // Get all the collection
 router.get('/contacts', controller.getAll);
