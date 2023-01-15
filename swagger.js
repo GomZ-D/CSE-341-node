@@ -6,7 +6,7 @@ const doc = {
       title: 'My API',
       description: 'Description',
     },
-    host: 'localhost:3000',
+    host: 'https://cse-341-w01-ulks.onrender.com',
     schemes: ['http'],
   };
   
